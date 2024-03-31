@@ -3,7 +3,6 @@
   display: flex;
   padding-top: 40px;
   align-items: center;
-  white-space: nowrap;
 }
 
 .profile__image {
@@ -45,7 +44,7 @@
   width: 24px;
   grid-area: button;
   border: 1px white;
-  margin-left: 25px;
+  margin-left: 0;
   cursor: pointer;
   transition: opacity 0.2s ease;
 }
