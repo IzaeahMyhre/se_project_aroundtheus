@@ -5,6 +5,14 @@
   align-items: center;
 }
 
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 .profile__image {
   width: 120px;
   height: 120px;
@@ -127,5 +135,12 @@
     width: 100%;
     max-width: 282px;
     box-sizing: border-box;
+  }
+}
+
+@media (max-width: 320px) {
+  .profile-text {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
