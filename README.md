@@ -44,7 +44,7 @@ Cascading Style Sheet was used to add custom styles, position elements, and crea
 
 ---
 
-[View Project](https://github.com/IzaeahMyhre/se_project_aroundtheus)
+https://izaeahmyhre.github.io/se_project_aroundtheus/
 
 ---
 
