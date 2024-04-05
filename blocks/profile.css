@@ -20,7 +20,6 @@
   border-radius: 50%;
   background-position: center;
   margin-right: 24px;
-  margin-bottom: 30px;
 }
 
 .profile__info {
@@ -69,8 +68,6 @@
   grid-area: description;
   margin: 0;
   width: 415px;
-  padding-bottom: 36px;
-  padding-top: 14px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -95,6 +92,7 @@
 @media screen and (max-width: 633px) {
   .profile {
     flex-direction: column;
+    padding-top: 42px;
   }
 
   .profile__image {
@@ -122,6 +120,8 @@
     text-align: center;
     font-size: 14px;
     line-height: 1.21;
+    margin-bottom: 36px;
+    margin-top: 14px;
   }
 
   .profile__edit-button {
@@ -135,12 +135,5 @@
     width: 100%;
     max-width: 282px;
     box-sizing: border-box;
-  }
-}
-
-@media (max-width: 320px) {
-  .profile-text {
-    padding-left: 10px;
-    padding-right: 10px;
   }
 }
