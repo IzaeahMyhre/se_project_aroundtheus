@@ -2,29 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content=" Around The U.S" />
-    <meta name="author" content="Izaeah Myhre" />
-    <title>Around The U.S</title>
+    <meta content="width=device-width,  initial-scale=1.0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Around the U.S.</title>
     <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
-
   <body class="page">
     <div class="page__content">
       <header class="header page__section">
         <img
-          src="./images/Logo.svg"
-          alt="Around the U.S. Logo"
+          src="images/aroundtheuslogo.svg"
+          alt="Around the U.S.logo"
           class="header__logo"
         />
       </header>
-
       <main class="content">
         <section class="profile page__section">
           <img
-            src="./images/jacques-cousteau.png"
-            alt="Avatar"
+            src="./images/jacques-cousteau.jpg"
+            alt="avatar"
             class="profile__image"
           />
           <div class="profile__info">
@@ -32,61 +28,89 @@
             <button
               class="profile__edit-button"
               id="profile-edit-button"
+              type="button"
             ></button>
             <p class="profile__description">Explorer</p>
           </div>
-          <button class="profile__add-button"></button>
+          <button class="profile__add-button" type="button"></button>
         </section>
-
         <section class="cards page__section">
           <ul class="cards__list"></ul>
+          <footer class="footer page__section">
+            <p class="footer__copyright">&copy; 2023 Around The U.S.</p>
+          </footer>
+          <!--edit card modal-->
+          <div class="modal" id="profile-edit-modal">
+            <div class="modal__container">
+              <button class="modal__close" type="button"></button>
+              <h3 class="modal__heading">Edit Profile</h3>
+              <form class="modal__form">
+                <input
+                  class="modal__input"
+                  id="profile-title-input"
+                  placeholder="name"
+                  type="text"
+                  name="Name"
+                />
+                <input
+                  class="modal__input"
+                  id="profile-description-input"
+                  placeholder="description"
+                  type="text"
+                  name="About me"
+                />
+                <button class="button modal__button" type="submit">Save</button>
+              </form>
+            </div>
+          </div>
+
+          <!--add card modal-->
+          <div class="modal" id="add-card-modal">
+            <div class="modal__container">
+              <button class="modal__close" type="button"></button>
+              <h3 class="modal__heading">New Place</h3>
+              <form class="modal__form" id="add-card-form">
+                <input
+                  class="modal__input modal__input_type_title"
+                  id="profile-input"
+                  placeholder="Title"
+                  type="text"
+                  name="Title"
+                />
+                <input
+                  class="modal__input modal__input_type_url"
+                  id="profile-modal-input"
+                  placeholder="Image URL"
+                  type="text"
+                  name="URL"
+                />
+                <button class="button modal__button" type="submit">Save</button>
+              </form>
+            </div>
+          </div>
+          <div class="modal" id="modal-preview-image">
+            <div class="modal__pic-container">
+              <button
+                class="modal__close modal__close_preview"
+                type="button"
+              ></button>
+              <img src="#" alt="#" class="modal__image" />
+              <p class="modal__caption"></p>
+            </div>
+          </div>
         </section>
       </main>
-
-      <footer class="footer page__section">
-        <p class="footer__copyright">&copy; 2024 Around The U.S</p>
-      </footer>
     </div>
-
-    <div class="modal" id="profile-edit-modal">
-      <div class="modal__container">
-        <button
-          class="modal__close"
-          id="modal-close-button"
-          type="button"
-        ></button>
-        <h2 class="modal__heading">Edit Profile</h2>
-        <form class="modal__form" name="profile-form">
-          <input
-            type="text"
-            name="title"
-            id="profile-title-input"
-            placeholder="Name"
-            class="modal__input"
-          />
-
-          <input
-            type="text"
-            name="description"
-            id="profile-description-input"
-            placeholder="Description"
-            class="modal__input"
-          />
-          <button class="modal__button" type="submit">Save</button>
-        </form>
-      </div>
-    </div>
-
     <template id="card-template">
       <li class="card">
-        <img class="card__image" src="" alt="" />
+        <img src="" class="card__image" alt="" />
+        <button class="card__delete-button" type="button"></button>
         <div class="card__description">
           <h2 class="card__title"></h2>
           <button class="card__like-button" type="button"></button>
         </div>
       </li>
     </template>
-
-    <script src="./scripts/index.js"></script>
+    <script src="./scripts/index.js" defer></script>
   </body>
 </html>
